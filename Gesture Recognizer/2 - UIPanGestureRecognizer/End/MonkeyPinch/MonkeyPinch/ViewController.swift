@@ -31,38 +31,55 @@ import UIKit
 class ViewController: UIViewController {
 
     //MARK: - smooth pan gesture recognizer
-  @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
-    guard let recognizerView = recognizer.view else {
-      return
+    @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
+        guard let recognizerView = recognizer.view else {
+            return
+        }
+
+        let translation = recognizer.translation(in: view)
+        recognizerView.center.x += translation.x
+        recognizerView.center.y += translation.y
+        recognizer.setTranslation(.zero, in: view)
+
+        guard recognizer.state == .ended else {
+            return
+        }
+
+        let velocity = recognizer.velocity(in: view)
+        let vectorToFinalPoint = CGPoint(x: velocity.x / 15, y: velocity.y / 15)
+        let bounds = UIEdgeInsetsInsetRect(view.bounds, view.safeAreaInsets)
+        var finalPoint = recognizerView.center
+        finalPoint.x += vectorToFinalPoint.x
+        finalPoint.y += vectorToFinalPoint.y
+        finalPoint.x = min(max(finalPoint.x, bounds.minX), bounds.maxX)
+        finalPoint.y = min(max(finalPoint.y, bounds.minY), bounds.maxY)
+        let vectorToFinalPointLength = (
+            vectorToFinalPoint.x * vectorToFinalPoint.x
+                + vectorToFinalPoint.y * vectorToFinalPoint.y
+            ).squareRoot()
+
+        UIView.animate(
+            withDuration: TimeInterval(vectorToFinalPointLength / 1800),
+            delay: 0,
+            options: .curveEaseOut,
+            animations: { recognizerView.center = finalPoint }
+        )
     }
-    
-    let translation = recognizer.translation(in: view)
-    recognizerView.center.x += translation.x
-    recognizerView.center.y += translation.y
-    recognizer.setTranslation(.zero, in: view)
 
-    guard recognizer.state == .ended else {
-        return
+
+    @IBAction func handlePinch(_ recognizer: UIPinchGestureRecognizer) {
+        guard let recognizerView = recognizer.view else {
+            return
+        }
+
+
     }
 
-    let velocity = recognizer.velocity(in: view)
-    let vectorToFinalPoint = CGPoint(x: velocity.x / 15, y: velocity.y / 15)
-    let bounds = UIEdgeInsetsInsetRect(view.bounds, view.safeAreaInsets)
-    var finalPoint = recognizerView.center
-    finalPoint.x += vectorToFinalPoint.x
-    finalPoint.y += vectorToFinalPoint.y
-    finalPoint.x = min(max(finalPoint.x, bounds.minX), bounds.maxX)
-    finalPoint.y = min(max(finalPoint.y, bounds.minY), bounds.maxY)
-    let vectorToFinalPointLength = (
-        vectorToFinalPoint.x * vectorToFinalPoint.x
-            + vectorToFinalPoint.y * vectorToFinalPoint.y
-        ).squareRoot()
+    @IBAction func handleRotate(_ recognizer: UIRotationGestureRecognizer) {
+        guard let recognizerView = recognizer.view else {
+            return
+        }
 
-    UIView.animate(
-        withDuration: TimeInterval(vectorToFinalPointLength / 1800),
-        delay: 0,
-        options: .curveEaseOut,
-        animations: { recognizerView.center = finalPoint }
-    )
-  }
+
+    }
 }

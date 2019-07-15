@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,6 +25,8 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="g7P-NF-YfY" appends="YES" id="MfK-dT-PLb"/>
+                                    <outletCollection property="gestureRecognizers" destination="l7D-7v-lsj" appends="YES" id="UK1-nw-gcK"/>
+                                    <outletCollection property="gestureRecognizers" destination="Pux-lX-PqO" appends="YES" id="gk0-6t-aDl"/>
                                 </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="l9n-ID-7da">
@@ -50,13 +51,23 @@
                         <action selector="handlePan:" destination="BYZ-38-t0r" id="KC8-aL-5sf"/>
                     </connections>
                 </panGestureRecognizer>
+                <pinchGestureRecognizer id="l7D-7v-lsj">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="cQB-Ds-Vdd"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="Pux-lX-PqO">
+                    <connections>
+                        <action selector="handleRotate:" destination="BYZ-38-t0r" id="EjH-OC-JaZ"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="14" y="2"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Jungle" width="1920" height="768"/>
-        <image name="banana" width="1000" height="1000"/>
-        <image name="monkey" width="1000" height="1000"/>
+        <image name="Jungle" width="960" height="384"/>
+        <image name="banana" width="500" height="500"/>
+        <image name="monkey" width="500" height="500"/>
     </resources>
 </document>
