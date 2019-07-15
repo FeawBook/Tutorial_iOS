@@ -29,6 +29,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+    //MARK: - smooth pan gesture recognizer
   @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
     guard let recognizerView = recognizer.view else {
       return
