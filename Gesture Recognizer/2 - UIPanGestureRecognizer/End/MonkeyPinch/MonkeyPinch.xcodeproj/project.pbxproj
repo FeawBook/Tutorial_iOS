@@ -110,7 +110,7 @@
 				TargetAttributes = {
 					AF7EC1171EE4A4990076F95A = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4AQJ37X836;
+						DevelopmentTeam = H969998C8C;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -121,6 +121,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -297,11 +298,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4AQJ37X836;
+				DEVELOPMENT_TEAM = H969998C8C;
 				INFOPLIST_FILE = MonkeyPinch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.MonkeyPinch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thanathip.MonkeyPinch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -318,11 +319,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4AQJ37X836;
+				DEVELOPMENT_TEAM = H969998C8C;
 				INFOPLIST_FILE = MonkeyPinch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.MonkeyPinch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thanathip.MonkeyPinch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

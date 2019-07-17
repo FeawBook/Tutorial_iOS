@@ -72,14 +72,22 @@ class ViewController: UIViewController {
             return
         }
 
-
+        recognizerView.transform = recognizerView.transform.scaledBy(x: recognizer.scale, y: recognizer.scale)
+        recognizer.scale = 1
     }
 
     @IBAction func handleRotate(_ recognizer: UIRotationGestureRecognizer) {
         guard let recognizerView = recognizer.view else {
             return
         }
+        recognizerView.transform = recognizerView.transform.rotated(by: recognizer.rotation)
+        recognizer.rotation = 0
 
+    }
+}
 
+extension ViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }

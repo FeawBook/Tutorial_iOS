@@ -29,10 +29,15 @@
                                     <outletCollection property="gestureRecognizers" destination="Pux-lX-PqO" appends="YES" id="gk0-6t-aDl"/>
                                 </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="l9n-ID-7da">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="l9n-ID-7da">
                                 <rect key="frame" x="20" y="252" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AmL-dT-eza" appends="YES" id="2tk-bp-Q6R"/>
+                                    <outletCollection property="gestureRecognizers" destination="FAZ-hl-C4b" appends="YES" id="2m3-sk-zia"/>
+                                    <outletCollection property="gestureRecognizers" destination="OH7-az-a5m" appends="YES" id="Dwi-xs-gmE"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,19 +51,40 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="g7P-NF-YfY">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="g7P-NF-YfY" userLabel="Monkey Pan Gesture Recognizer">
                     <connections>
                         <action selector="handlePan:" destination="BYZ-38-t0r" id="KC8-aL-5sf"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="OSE-3g-5HP"/>
                     </connections>
                 </panGestureRecognizer>
-                <pinchGestureRecognizer id="l7D-7v-lsj">
+                <pinchGestureRecognizer id="l7D-7v-lsj" userLabel="Monkey Pinch Gesture Recognizer">
                     <connections>
                         <action selector="handlePinch:" destination="BYZ-38-t0r" id="cQB-Ds-Vdd"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="v10-wo-btp"/>
                     </connections>
                 </pinchGestureRecognizer>
-                <rotationGestureRecognizer id="Pux-lX-PqO">
+                <rotationGestureRecognizer id="Pux-lX-PqO" userLabel="Monkey Rotation Gesture Recognizer">
                     <connections>
                         <action selector="handleRotate:" destination="BYZ-38-t0r" id="EjH-OC-JaZ"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="A8N-0s-ubZ"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="AmL-dT-eza" userLabel="Banana Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="5tX-n5-fxS"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="4MD-ZQ-ZQ0"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="FAZ-hl-C4b" userLabel="Banana Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="ydS-b5-YxS"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="aeg-WV-wgV"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="OH7-az-a5m" userLabel="Banana Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="handleRotate:" destination="BYZ-38-t0r" id="gQK-7F-gf3"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Zmf-th-AEF"/>
                     </connections>
                 </rotationGestureRecognizer>
             </objects>
