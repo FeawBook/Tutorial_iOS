@@ -14,6 +14,10 @@
 		49B98DD9215C137C00567093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B98DD8215C137C00567093 /* Assets.xcassets */; };
 		49B98DDC215C137C00567093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B98DDA215C137C00567093 /* LaunchScreen.storyboard */; };
 		49B9B93F216C686A00B88076 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9B93E216C686A00B88076 /* UIView.swift */; };
+		DD1725CA22E703AB00BD5DF9 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1725C922E703AB00BD5DF9 /* CardView.xib */; };
+		DD1725CC22E704A500BD5DF9 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1725CB22E704A500BD5DF9 /* FrontCardView.swift */; };
+		DD1725CE22E7061300BD5DF9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1725CD22E7061300BD5DF9 /* CardView.swift */; };
+		DD1725D022E7120500BD5DF9 /* CardSuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1725CF22E7120500BD5DF9 /* CardSuperView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		49B98DDB215C137C00567093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B98DDD215C137C00567093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49B9B93E216C686A00B88076 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		DD1725C922E703AB00BD5DF9 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		DD1725CB22E704A500BD5DF9 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
+		DD1725CD22E7061300BD5DF9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DD1725CF22E7120500BD5DF9 /* CardSuperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSuperView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,10 @@
 		49EA089021616919003ACAAF /* CardView */ = {
 			isa = PBXGroup;
 			children = (
+				DD1725C922E703AB00BD5DF9 /* CardView.xib */,
+				DD1725CB22E704A500BD5DF9 /* FrontCardView.swift */,
+				DD1725CD22E7061300BD5DF9 /* CardView.swift */,
+				DD1725CF22E7120500BD5DF9 /* CardSuperView.swift */,
 			);
 			path = CardView;
 			sourceTree = "<group>";
@@ -154,6 +166,7 @@
 			files = (
 				49B98DDC215C137C00567093 /* LaunchScreen.storyboard in Resources */,
 				49B98DD9215C137C00567093 /* Assets.xcassets in Resources */,
+				DD1725CA22E703AB00BD5DF9 /* CardView.xib in Resources */,
 				49B98DD7215C137A00567093 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +182,9 @@
 				49B98DD4215C137A00567093 /* LessonViewController.swift in Sources */,
 				49B9B93F216C686A00B88076 /* UIView.swift in Sources */,
 				49B98DD2215C137A00567093 /* AppDelegate.swift in Sources */,
+				DD1725CE22E7061300BD5DF9 /* CardView.swift in Sources */,
+				DD1725D022E7120500BD5DF9 /* CardSuperView.swift in Sources */,
+				DD1725CC22E704A500BD5DF9 /* FrontCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

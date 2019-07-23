@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="FrontCardView" customModule="Cardeo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textured yellow gradient" translatesAutoresizingMaskIntoConstraints="NO" id="iYe-ch-O4I" userLabel="Background View">
+                    <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple gradient" translatesAutoresizingMaskIntoConstraints="NO" id="oTe-lg-ZnC" customClass="FrontCardImageView" customModule="Cardeo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="maskImage" value="Aye-Aye"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iYe-ch-O4I" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="0tH-2W-pZ4"/>
+                <constraint firstItem="oTe-lg-ZnC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1MO-6w-fFR"/>
+                <constraint firstItem="iYe-ch-O4I" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9d0-hq-LAJ"/>
+                <constraint firstItem="oTe-lg-ZnC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NGA-tZ-WC9"/>
+                <constraint firstItem="iYe-ch-O4I" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="l9r-OZ-dau"/>
+                <constraint firstItem="iYe-ch-O4I" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="low-0D-YvS"/>
+                <constraint firstItem="oTe-lg-ZnC" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="p2a-r7-LMO"/>
+                <constraint firstItem="oTe-lg-ZnC" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="pjV-Hm-YiF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="oTe-lg-ZnC" id="aUm-rl-ICK"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="Aye-Aye" width="1000" height="1000"/>
+        <image name="purple gradient" width="200" height="200"/>
+        <image name="textured yellow gradient" width="200" height="200"/>
+    </resources>
+</document>

@@ -17,7 +17,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hTW-n8-pat">
+                                <rect key="frame" x="0.0" y="94.5" width="414" height="717"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkn-sc-odh" customClass="CardSuperView" customModule="Cardeo" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="0.0" width="350" height="350.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dkn-sc-odh" secondAttribute="height" multiplier="1:1" id="qXg-8z-x2Y"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fs-qQ-aME">
+                                        <rect key="frame" x="32" y="366.5" width="350" height="350.5"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7fs-qQ-aME" firstAttribute="width" secondItem="dkn-sc-odh" secondAttribute="width" id="tWt-dw-7j6"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" name="Lesson Background"/>
+                        <constraints>
+                            <constraint firstItem="hTW-n8-pat" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="4/5" id="EKa-im-JRw"/>
+                            <constraint firstItem="hTW-n8-pat" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="PC3-Io-mQA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hTW-n8-pat" secondAttribute="trailing" id="Unr-lN-cOQ"/>
+                            <constraint firstItem="hTW-n8-pat" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bB2-jz-N4A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lesson" image="Lesson" id="H6G-eu-pgH"/>
