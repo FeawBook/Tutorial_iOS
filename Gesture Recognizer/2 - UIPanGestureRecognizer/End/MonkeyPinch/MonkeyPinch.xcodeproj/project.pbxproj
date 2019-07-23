@@ -13,6 +13,7 @@
 		AF7EC1261EE4A4990076F95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7EC1241EE4A4990076F95A /* LaunchScreen.storyboard */; };
 		AF7EC1311EE4B1230076F95A /* chomp.caf in Resources */ = {isa = PBXBuildFile; fileRef = AF7EC12F1EE4B1230076F95A /* chomp.caf */; };
 		AF7EC1321EE4B1230076F95A /* hehehe.caf in Resources */ = {isa = PBXBuildFile; fileRef = AF7EC1301EE4B1230076F95A /* hehehe.caf */; };
+		DD28E56122E463BF000523F5 /* TickleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28E56022E463BF000523F5 /* TickleGestureRecognizer.swift */; };
 		E223A6892191CE070049F5BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E223A6882191CE070049F5BC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		AF7EC1271EE4A4990076F95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7EC12F1EE4B1230076F95A /* chomp.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chomp.caf; sourceTree = "<group>"; };
 		AF7EC1301EE4B1230076F95A /* hehehe.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hehehe.caf; sourceTree = "<group>"; };
+		DD28E56022E463BF000523F5 /* TickleGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickleGestureRecognizer.swift; sourceTree = "<group>"; };
 		E223A6882191CE070049F5BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				AF7EC1241EE4A4990076F95A /* LaunchScreen.storyboard */,
 				E223A6882191CE070049F5BC /* Assets.xcassets */,
 				AF7EC1271EE4A4990076F95A /* Info.plist */,
+				DD28E56022E463BF000523F5 /* TickleGestureRecognizer.swift */,
 			);
 			path = MonkeyPinch;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF7EC11E1EE4A4990076F95A /* ViewController.swift in Sources */,
+				DD28E56122E463BF000523F5 /* TickleGestureRecognizer.swift in Sources */,
 				AF7EC11C1EE4A4990076F95A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

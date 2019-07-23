@@ -27,8 +27,38 @@
 /// THE SOFTWARE.
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+
+    let chompPlayer = AVAudioPlayer(fileName: "chomp")
+    let laughPlayer = AVAudioPlayer(fileName: "hehehe")
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        interactiveSubView.map {
+            $0.gestureRecognizers!.first { $0 is UIPanGestureRecognizer }
+        }
+            .forEach { panRecognizer in
+                panRecognizer?.view!.gestureRecognizers!
+                    .first { $0 is UITapGestureRecognizer }!
+                    .require(toFail: panRecognizer!)
+        }
+    }
+
+    @IBOutlet var interactiveSubView: [UIImageView]! {
+        didSet {
+            for subView in interactiveSubView {
+                let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+                tap.delegate = self
+                subView.addGestureRecognizer(tap)
+
+                let tickle = TickleGestureRecognizer(target: self, action: #selector(handleTickle))
+                tickle.delegate = self
+                subView.addGestureRecognizer(tickle)
+            }
+        }
+    }
 
     //MARK: - smooth pan gesture recognizer
     @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
@@ -84,10 +114,26 @@ class ViewController: UIViewController {
         recognizer.rotation = 0
 
     }
+
+    @objc func handleTap(_ : UITapGestureRecognizer) {
+        chompPlayer.play()
+    }
+
+    @objc func handleTickle(_ : TickleGestureRecognizer) {
+        laughPlayer.play()
+    }
 }
 
 extension ViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
+    }
+}
+
+extension AVAudioPlayer {
+    convenience init(fileName: String) {
+        let url = Bundle.main.url(forResource: fileName, withExtension: "caf")!
+        try! self.init(contentsOf: url)
+        prepareToPlay()
     }
 }
