@@ -62,7 +62,7 @@ import UIKit
     
     @IBAction func handleTap(_ sender: CardView) {
         sender.flip()
-        handleFlip?(.front)
+        handleFlip?(sender.otherSide.side)
     }
 
 

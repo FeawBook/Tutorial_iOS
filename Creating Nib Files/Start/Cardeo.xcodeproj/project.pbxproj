@@ -18,6 +18,7 @@
 		DD1725CC22E704A500BD5DF9 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1725CB22E704A500BD5DF9 /* FrontCardView.swift */; };
 		DD1725CE22E7061300BD5DF9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1725CD22E7061300BD5DF9 /* CardView.swift */; };
 		DD1725D022E7120500BD5DF9 /* CardSuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1725CF22E7120500BD5DF9 /* CardSuperView.swift */; };
+		DD9FA04822EC686A000B3E39 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9FA04722EC686A000B3E39 /* BackCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DD1725CB22E704A500BD5DF9 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		DD1725CD22E7061300BD5DF9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DD1725CF22E7120500BD5DF9 /* CardSuperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSuperView.swift; sourceTree = "<group>"; };
+		DD9FA04722EC686A000B3E39 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				DD1725C922E703AB00BD5DF9 /* CardView.xib */,
 				DD1725CB22E704A500BD5DF9 /* FrontCardView.swift */,
+				DD9FA04722EC686A000B3E39 /* BackCardView.swift */,
 				DD1725CD22E7061300BD5DF9 /* CardView.swift */,
 				DD1725CF22E7120500BD5DF9 /* CardSuperView.swift */,
 			);
@@ -182,6 +185,7 @@
 				49B98DD4215C137A00567093 /* LessonViewController.swift in Sources */,
 				49B9B93F216C686A00B88076 /* UIView.swift in Sources */,
 				49B98DD2215C137A00567093 /* AppDelegate.swift in Sources */,
+				DD9FA04822EC686A000B3E39 /* BackCardView.swift in Sources */,
 				DD1725CE22E7061300BD5DF9 /* CardView.swift in Sources */,
 				DD1725D022E7120500BD5DF9 /* CardSuperView.swift in Sources */,
 				DD1725CC22E704A500BD5DF9 /* FrontCardView.swift in Sources */,

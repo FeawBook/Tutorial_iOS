@@ -26,28 +26,21 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import Foundation
 import UIKit
 
-@IBDesignable class CardView: UIControl {
-    enum Side {
-        case front, back
+class BackCardView: CardView {
+    @IBOutlet var label: UILabel!
+
+    override var card: Card! {
+        didSet {
+            label.text = card.name
+        }
     }
 
-    @IBOutlet weak var otherSide: CardView!
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        roundCorners()
+    override var side: Side {
+        return .back
     }
-
-    var card: Card!
-    var side: Side {fatalError()}
-
-    func flip(to side: Side? = nil) {
-        UIView.transition(from: self,
-                          to: side == self.side ? self : otherSide,
-                          duration: 0.35,
-                          options: [.transitionFlipFromRight, .showHideTransitionViews])
-    }
-
 }
+
+
