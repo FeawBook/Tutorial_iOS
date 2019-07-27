@@ -30,6 +30,13 @@ import UIKit
 
 @IBDesignable class CardSuperView: UIView {
 
+    var handleFlip: ((_ destination: CardView.Side) -> Void)?
+
+    var cardViews: [CardView] {
+        return subviews as! [CardView]
+    }
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         addCardView()
@@ -51,4 +58,17 @@ import UIKit
         }
     }
 
+
+    
+    @IBAction func handleTap(_ sender: CardView) {
+        sender.flip()
+        handleFlip?(.front)
+    }
+
+
+    func setCard(_ card: Card, side: CardView.Side, flip: Bool) {
+        for cardView in cardViews {
+            cardView.card = card
+        }
+    }
 }

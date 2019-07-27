@@ -37,6 +37,10 @@ class FrontCardView: CardView {
             imageView.maskImage = card.image
         }
     }
+
+    override var side: Side {
+        return .front
+    }
 }
 
 @IBDesignable class FrontCardImageView: UIImageView {

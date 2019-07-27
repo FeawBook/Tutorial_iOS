@@ -28,10 +28,25 @@
 
 import UIKit
 
-@IBDesignable class CardView: UIView {
-    var card: Card!
+@IBDesignable class CardView: UIControl {
+    enum Side {
+        case front, back
+    }
+
+
     override func layoutSubviews() {
         super.layoutSubviews()
         roundCorners()
     }
+
+    var card: Card!
+    var side: Side {fatalError()}
+
+    func flip(to side: Side? = nil) {
+        UIView.transition(from: self,
+                          to: self,
+                          duration: 0.35,
+                          options: [.transitionFlipFromRight, .showHideTransitionViews])
+    }
+
 }

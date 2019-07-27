@@ -29,5 +29,24 @@
 import UIKit
 
 class LessonViewController: UIViewController {
-  var cards: [Card]!
+    var cards: [Card]!
+
+
+    @IBOutlet var cardSuperView: CardSuperView! {
+        didSet {
+            cardSuperView.handleFlip = { [unowned self] _ in
+                self.pickNewCard()
+            }
+        }
+    }
+
+    override func viewDidLoad() {
+        pickNewCard()
+
+    }
+
+    func pickNewCard() {
+        let card = cards.randomElement()!
+        cardSuperView.setCard(card, side: .front, flip: false)
+    }
 }
